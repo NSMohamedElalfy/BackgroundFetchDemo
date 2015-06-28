@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  BackgroundFetchDemo
+//  BackgroundFetchAPIEx
 //
-//  Created by Mohamed El-Alfy on 4/23/15.
+//  Created by Mohamed El-Alfy on 3/14/15.
 //  Copyright (c) 2015 Mohamed El-Alfy. All rights reserved.
 //
 
@@ -16,7 +16,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        application.setMinimumBackgroundFetchInterval(UIApplicationBackgroundFetchIntervalMinimum)
         return true
+    }
+    
+    func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
+        
+        var fetchStart:NSDate = NSDate()
+        
+        let viewController:ViewController = self.window?.rootViewController as! ViewController
+        viewController.fetchNewDataWithCompletionHandler { (result:UIBackgroundFetchResult) -> Void in
+            completionHandler(result)
+            var fetchEnd:NSDate = NSDate()
+            var timeElapsed:NSTimeInterval = fetchEnd.timeIntervalSinceDate(fetchStart)
+            NSLog("Background Fetch Duration: %f seconds", timeElapsed)
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {
