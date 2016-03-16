@@ -23,13 +23,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, performFetchWithCompletionHandler completionHandler: (UIBackgroundFetchResult) -> Void) {
         
-        var fetchStart:NSDate = NSDate()
+        let fetchStart:NSDate = NSDate()
         
         let viewController:ViewController = self.window?.rootViewController as! ViewController
         viewController.fetchNewDataWithCompletionHandler { (result:UIBackgroundFetchResult) -> Void in
             completionHandler(result)
-            var fetchEnd:NSDate = NSDate()
-            var timeElapsed:NSTimeInterval = fetchEnd.timeIntervalSinceDate(fetchStart)
+            let fetchEnd:NSDate = NSDate()
+            let timeElapsed:NSTimeInterval = fetchEnd.timeIntervalSinceDate(fetchStart)
             NSLog("Background Fetch Duration: %f seconds", timeElapsed)
         }
         

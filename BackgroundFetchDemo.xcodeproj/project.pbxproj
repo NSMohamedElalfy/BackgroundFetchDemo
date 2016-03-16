@@ -9,29 +9,17 @@
 /* Begin PBXBuildFile section */
 		B12BB30B1AE867A600421949 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B12BB30A1AE867A600421949 /* Images.xcassets */; };
 		B12BB30E1AE867A600421949 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B12BB30C1AE867A600421949 /* LaunchScreen.xib */; };
-		B12BB31A1AE867A600421949 /* BackgroundFetchDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BB3191AE867A600421949 /* BackgroundFetchDemoTests.swift */; };
 		B12BB3271AE867DE00421949 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BB3241AE867DE00421949 /* AppDelegate.swift */; };
 		B12BB3281AE867DE00421949 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B12BB3251AE867DE00421949 /* Main.storyboard */; };
 		B12BB3291AE867DE00421949 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B12BB3261AE867DE00421949 /* ViewController.swift */; };
 		B12BB32C1AE867EC00421949 /* XMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = B12BB32B1AE867EC00421949 /* XMLParser.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		B12BB3141AE867A600421949 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B12BB2F61AE867A600421949 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B12BB2FD1AE867A600421949;
-			remoteInfo = BackgroundFetchDemo;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		B12BB2FE1AE867A600421949 /* BackgroundFetchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundFetchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12BB3021AE867A600421949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12BB30A1AE867A600421949 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B12BB30D1AE867A600421949 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		B12BB3131AE867A600421949 /* BackgroundFetchDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BackgroundFetchDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B12BB3181AE867A600421949 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B12BB3191AE867A600421949 /* BackgroundFetchDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundFetchDemoTests.swift; sourceTree = "<group>"; };
 		B12BB3231AE867DE00421949 /* BackgroundFetchDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BackgroundFetchDemo-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -44,13 +32,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		B12BB2FB1AE867A600421949 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B12BB3101AE867A600421949 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				B12BB2FE1AE867A600421949 /* BackgroundFetchDemo.app */,
-				B12BB3131AE867A600421949 /* BackgroundFetchDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,31 +119,15 @@
 			productReference = B12BB2FE1AE867A600421949 /* BackgroundFetchDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B12BB3121AE867A600421949 /* BackgroundFetchDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B12BB3201AE867A600421949 /* Build configuration list for PBXNativeTarget "BackgroundFetchDemoTests" */;
-			buildPhases = (
-				B12BB30F1AE867A600421949 /* Sources */,
-				B12BB3101AE867A600421949 /* Frameworks */,
-				B12BB3111AE867A600421949 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B12BB3151AE867A600421949 /* PBXTargetDependency */,
-			);
-			name = BackgroundFetchDemoTests;
-			productName = BackgroundFetchDemoTests;
-			productReference = B12BB3131AE867A600421949 /* BackgroundFetchDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		B12BB2F61AE867A600421949 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0720;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Mohamed El-Alfy";
 				TargetAttributes = {
 					B12BB2FD1AE867A600421949 = {
@@ -173,10 +137,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					B12BB3121AE867A600421949 = {
-						CreatedOnToolsVersion = 6.3;
-						TestTargetID = B12BB2FD1AE867A600421949;
 					};
 				};
 			};
@@ -194,7 +154,6 @@
 			projectRoot = "";
 			targets = (
 				B12BB2FD1AE867A600421949 /* BackgroundFetchDemo */,
-				B12BB3121AE867A600421949 /* BackgroundFetchDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -207,13 +166,6 @@
 				B12BB3281AE867DE00421949 /* Main.storyboard in Resources */,
 				B12BB30E1AE867A600421949 /* LaunchScreen.xib in Resources */,
 				B12BB30B1AE867A600421949 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B12BB3111AE867A600421949 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,23 +182,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B12BB30F1AE867A600421949 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B12BB31A1AE867A600421949 /* BackgroundFetchDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		B12BB3151AE867A600421949 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B12BB2FD1AE867A600421949 /* BackgroundFetchDemo */;
-			targetProxy = B12BB3141AE867A600421949 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B12BB30C1AE867A600421949 /* LaunchScreen.xib */ = {
@@ -281,6 +217,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -350,6 +287,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BackgroundFetchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mo7amedelalfy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BackgroundFetchDemo/BackgroundFetchDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -363,42 +301,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = BackgroundFetchDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mo7amedelalfy.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "BackgroundFetchDemo/BackgroundFetchDemo-Bridging-Header.h";
-			};
-			name = Release;
-		};
-		B12BB3211AE867A600421949 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BackgroundFetchDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundFetchDemo.app/BackgroundFetchDemo";
-			};
-			name = Debug;
-		};
-		B12BB3221AE867A600421949 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = BackgroundFetchDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BackgroundFetchDemo.app/BackgroundFetchDemo";
 			};
 			name = Release;
 		};
@@ -421,14 +326,7 @@
 				B12BB31F1AE867A600421949 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		B12BB3201AE867A600421949 /* Build configuration list for PBXNativeTarget "BackgroundFetchDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B12BB3211AE867A600421949 /* Debug */,
-				B12BB3221AE867A600421949 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

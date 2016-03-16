@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     var refreshControl:UIRefreshControl!
     var arrNewsData:NSArray = []
     var dataFilePath:String!
-    let NewsFeed:NSString = "http://feeds.reuters.com/reuters/technologyNews"
+    let NewsFeed:String = "http://feeds.reuters.com/reuters/technologyNews"
     
     
     override func viewDidLoad() {
@@ -43,6 +43,8 @@ class ViewController: UIViewController {
             self.tableView.reloadData()
         }
         
+        
+        refreshData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,13 +53,13 @@ class ViewController: UIViewController {
     }
     
     func refreshData(){
-        let xmlParser = XMLParser(XMLURLString: NewsFeed as String)
+        let xmlParser = XMLParser(XMLURLString: NewsFeed)
         xmlParser.startParsingWithCompletionHandler { (success:Bool, dataArray:[AnyObject]!, error:NSError!) -> Void in
             if success {
                 self.performNewFetchedDataActionsWithDataArray(dataArray as NSArray)
                 self.refreshControl.endRefreshing()
             }else{
-                println(error.localizedDescription)
+                print(error.localizedDescription)
             }
             
         }
@@ -79,7 +81,7 @@ class ViewController: UIViewController {
     
     func fetchNewDataWithCompletionHandler(completionHandler:(UIBackgroundFetchResult)->Void){
         
-        let xmlParser = XMLParser(XMLURLString: NewsFeed as String)
+        let xmlParser = XMLParser(XMLURLString: NewsFeed)
         xmlParser.startParsingWithCompletionHandler { (success:Bool, dataArray:[AnyObject]!, error:NSError!) -> Void in
             if success {
                 let tempDataArray = dataArray as NSArray
@@ -109,7 +111,7 @@ class ViewController: UIViewController {
                 completionHandler(UIBackgroundFetchResult.Failed);
                 
                 NSLog("Failed to fetch new data.")
-                println(error.localizedDescription)
+                print(error.localizedDescription)
             }
             
         }
@@ -119,7 +121,10 @@ class ViewController: UIViewController {
     @IBAction func removeDataFile(sender: AnyObject) {
         
         if NSFileManager.defaultManager().fileExistsAtPath(self.dataFilePath) {
-            NSFileManager.defaultManager().removeItemAtPath(self.dataFilePath, error: nil)
+            do {
+                try NSFileManager.defaultManager().removeItemAtPath(self.dataFilePath)
+            } catch _ {
+            }
             self.arrNewsData = []
             self.tableView.reloadData()
         }
@@ -139,7 +144,7 @@ extension ViewController:UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("idCellNewsTitle", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("idCellNewsTitle", forIndexPath: indexPath) 
         let dict:NSDictionary = self.arrNewsData.objectAtIndex(indexPath.row) as! NSDictionary
         
         cell.textLabel?.text = dict.objectForKey("title") as? String
